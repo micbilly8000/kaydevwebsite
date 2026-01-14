@@ -64,7 +64,7 @@ export const Contact: React.FC = () => {
                   {
                     icon: LuMail,
                     label: 'Email',
-                    value: 'info@kaydev.com',
+                    value: 'info@kaydevtech.com',
                   },
                   {
                     icon: LuPhone,

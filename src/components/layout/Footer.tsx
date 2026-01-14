@@ -145,7 +145,7 @@ export const Footer: React.FC = () => {
                 <LuTwitter size={20} />
               </a>
               <a
-                href="mailto:info@kaydev.com"
+                href="mailto:info@kaydevtech.com"
                 className="text-neutral-400 hover:text-primary-500 transition-colors"
                 aria-label="Email"
               >
