@@ -221,7 +221,7 @@ export const services: Service[] = [
     id: 'temporary-staffing',
     title: 'Temporary Staffing',
     slug: 'temporary-staffing',
-    tagline: 'Cleared Security Professionals for Short-Term Needs',
+    tagline: 'Security Professionals for Short-Term Needs',
     description: 'Access to DoD-cleared cybersecurity experts and staffing solutions.',
     fullDescription: 'We provide temporary staffing with security-cleared personnel for cybersecurity, cloud security, and network engineering roles. Our team includes cleared professionals for government and commercial projects.',
     icon: 'Users',
