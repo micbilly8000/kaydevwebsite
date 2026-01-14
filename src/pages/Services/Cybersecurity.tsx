@@ -1,0 +1,18 @@
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ServiceTemplate } from '@components/services/ServiceTemplate'
+import { services } from '@data/services'
+
+export const Cybersecurity: React.FC = () => {
+  const service = services.find(s => s.id === 'cybersecurity')!
+
+  return (
+    <>
+      <Helmet>
+        <title>{service.title} | KayDev Technology</title>
+        <meta name="description" content={service.description} />
+      </Helmet>
+      <ServiceTemplate service={service} />
+    </>
+  )
+}

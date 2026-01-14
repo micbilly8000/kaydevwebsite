@@ -1,0 +1,17 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#FA582D" stroke-width="3"/>
+
+  <!-- Shield symbol -->
+  <path d="M 100 40 L 140 60 L 140 110 C 140 140 100 160 100 160 C 100 160 60 140 60 110 L 60 60 Z"
+        fill="none" stroke="#FA582D" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- Checkmark -->
+  <path d="M 85 110 L 95 120 L 120 85"
+        fill="none" stroke="#FA582D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- K letter -->
+  <g transform="translate(100, 100)">
+    <text x="-35" y="15" font-family="Poppins, sans-serif" font-size="48" font-weight="bold" fill="#FA582D">K</text>
+  </g>
+</svg>

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utility classes */
+@layer components {
+  .container-max {
+    @apply mx-auto max-w-container px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-dark-400;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-dark-400;
+  }
+
+  .heading-1 {
+    @apply text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-white;
+  }
+
+  .heading-2 {
+    @apply text-4xl sm:text-5xl font-display font-bold text-white;
+  }
+
+  .heading-3 {
+    @apply text-3xl sm:text-4xl font-display font-semibold text-white;
+  }
+
+  .body-text {
+    @apply text-base sm:text-lg text-neutral-300;
+  }
+
+  .card {
+    @apply rounded-xl bg-dark-300 border border-dark-200 p-6 shadow-lg hover:shadow-xl transition-shadow duration-200;
+  }
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #141414;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FA582D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E24920;
+}
