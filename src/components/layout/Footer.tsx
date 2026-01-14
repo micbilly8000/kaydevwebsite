@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
               <img
                 src="/logo.svg"
                 alt="KayDev Technology"
-                className="h-16 w-auto"
+                className="h-[108px] w-auto"
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = 'none'
                 }}

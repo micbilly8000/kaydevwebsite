@@ -35,7 +35,7 @@ export const Header: React.FC = () => {
             <img
               src="/logo.svg"
               alt="KayDev Technology"
-              className="h-24 w-auto"
+              className="h-[161px] w-auto"
               onError={(e) => {
                 // If logo fails to load, hide the img and show fallback
                 (e.target as HTMLImageElement).style.display = 'none'
