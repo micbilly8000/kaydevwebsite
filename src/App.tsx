@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { Header } from '@components/layout/Header'
 import { Footer } from '@components/layout/Footer'
 import { Home } from '@pages/Home'
+import { ServicesIndex } from '@pages/Services/Index'
 import { Cybersecurity } from '@pages/Services/Cybersecurity'
 import { CloudSecurity } from '@pages/Services/CloudSecurity'
 import { BlockchainSecurity } from '@pages/Services/BlockchainSecurity'
@@ -25,6 +26,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/services" element={<ServicesIndex />} />
             <Route path="/services/cybersecurity" element={<Cybersecurity />} />
             <Route path="/services/cloud-security" element={<CloudSecurity />} />
             <Route path="/services/blockchain-security" element={<BlockchainSecurity />} />

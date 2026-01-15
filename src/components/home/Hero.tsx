@@ -69,7 +69,7 @@ export const Hero: React.FC = () => {
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 mb-12"
           >
-            <Link to="/services/cybersecurity">
+            <Link to="/services">
               <Button variant="primary" size="lg">
                 Explore Services
               </Button>
