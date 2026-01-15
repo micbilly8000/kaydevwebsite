@@ -26,6 +26,13 @@ export const Hero: React.FC = () => {
     },
   }
 
+  const handleScroll = () => {
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -75,13 +82,15 @@ export const Hero: React.FC = () => {
           </motion.div>
 
           {/* Scroll Indicator */}
-          <motion.div
+          <motion.button
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
-            className="flex justify-center mt-16"
+            onClick={handleScroll}
+            className="flex justify-center mt-16 cursor-pointer hover:opacity-100 transition-opacity"
+            aria-label="Scroll to next section"
           >
-            <LuChevronDown size={32} className="text-primary-500 opacity-70" />
-          </motion.div>
+            <LuChevronDown size={32} className="text-primary-500 opacity-70 hover:opacity-100" />
+          </motion.button>
         </motion.div>
       </Container>
     </section>
