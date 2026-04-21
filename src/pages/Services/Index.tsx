@@ -79,8 +79,41 @@ export const ServicesIndex: React.FC = () => {
             })}
           </div>
 
+          {/* AI Security Catalog Feature Card */}
+          <AnimatedSection className="mt-16">
+            <Card className="bg-gradient-to-br from-primary-500/10 via-dark-300 to-dark-400 border-primary-500/40">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                <div className="flex-1">
+                  <div className="text-primary-500 text-xs font-bold uppercase tracking-widest mb-2">
+                    New • Productized AI Security
+                  </div>
+                  <h3 className="heading-3 mb-2">
+                    AI Security &amp; Governance Services Catalog
+                  </h3>
+                  <p className="text-neutral-300 text-sm leading-relaxed mb-3">
+                    Vendor-neutral assessments, NIST AI RMF-aligned governance, and
+                    flexible remediation across 12 productized offerings — from a $497
+                    Shadow AI Discovery to enterprise-managed AI security. Built for
+                    professional-services firms and mid-market companies.
+                  </p>
+                  <p className="text-xs text-neutral-500">
+                    Certified Native-Owned • Black-Owned • SDVOSB • MBE • SBE • DBE
+                  </p>
+                </div>
+                <div className="flex-shrink-0">
+                  <Link
+                    to="/services/ai-security-catalog"
+                    className="inline-block bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg px-6 py-3 transition-colors duration-200 text-sm whitespace-nowrap"
+                  >
+                    Explore Catalog →
+                  </Link>
+                </div>
+              </div>
+            </Card>
+          </AnimatedSection>
+
           {/* CTA Section */}
-          <AnimatedSection className="mt-20 text-center">
+          <AnimatedSection className="mt-16 text-center">
             <h2 className="heading-2 mb-6">Ready to Secure Your Infrastructure?</h2>
             <p className="body-text mb-8 max-w-2xl mx-auto">
               Contact our security experts to discuss which solutions are right for your organization.

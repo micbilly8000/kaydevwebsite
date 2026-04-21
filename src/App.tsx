@@ -8,6 +8,7 @@ import { Cybersecurity } from '@pages/Services/Cybersecurity'
 import { CloudSecurity } from '@pages/Services/CloudSecurity'
 import { BlockchainSecurity } from '@pages/Services/BlockchainSecurity'
 import { AIAutomationSecurity } from '@pages/Services/AIAutomationSecurity'
+import { AISecurityCatalog } from '@pages/Services/AISecurityCatalog'
 import { TemporaryStaffing } from '@pages/Services/TemporaryStaffing'
 import { NAICSCodes } from '@pages/NAICSCodes'
 import { ClientRoster } from '@pages/ClientRoster'
@@ -31,6 +32,7 @@ function App() {
             <Route path="/services/cloud-security" element={<CloudSecurity />} />
             <Route path="/services/blockchain-security" element={<BlockchainSecurity />} />
             <Route path="/services/ai-automation-security" element={<AIAutomationSecurity />} />
+            <Route path="/services/ai-security-catalog" element={<AISecurityCatalog />} />
             <Route path="/services/temporary-staffing" element={<TemporaryStaffing />} />
             <Route path="/naics-codes" element={<NAICSCodes />} />
             <Route path="/clients" element={<ClientRoster />} />
