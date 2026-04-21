@@ -24,6 +24,11 @@ export const About: React.FC = () => {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
+              <div className="inline-block mb-4 px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30">
+                <span className="text-primary-500 font-semibold text-sm tracking-wide">
+                  Vendor-Neutral. Stack-Flexible.
+                </span>
+              </div>
               <h2 className="heading-2 mb-6">Our Mission</h2>
               <p className="body-text text-lg leading-relaxed mb-6">
                 To protect critical infrastructure and enterprise systems through innovative, comprehensive cybersecurity solutions that exceed the highest industry standards.

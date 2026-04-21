@@ -31,6 +31,19 @@ export const CertificationsSection: React.FC<CertificationsSectionProps> = ({
   return (
     <section className="py-16 bg-dark-300">
       <Container>
+        <AnimatedSection className="text-center mb-12 max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 mb-3 px-4 py-1.5 rounded-full bg-primary-500/10 border border-primary-500/30">
+            <LuAward className="text-primary-500" size={16} />
+            <span className="text-primary-500 font-semibold text-xs tracking-wider uppercase">
+              Certified Diverse Supplier
+            </span>
+          </div>
+          <h2 className="heading-2 mb-4">Certifications & Designations</h2>
+          <p className="body-text">
+            Officially recognized diverse supplier with federal and state certifications
+          </p>
+        </AnimatedSection>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {/* Native American Business */}
           <AnimatedSection>
