@@ -160,6 +160,7 @@ export const aiSecurityServices: AISecurityService[] = [
         'Each NIST function maps to concrete controls. The roadmap is actionable against any modern stack — not a theoretical PowerPoint.',
     },
     ctaLabel: 'Schedule Consultation',
+    requestMeeting: true,
   },
   {
     id: 'enterprise-assessment',
@@ -184,7 +185,8 @@ export const aiSecurityServices: AISecurityService[] = [
       description:
         'Results feed into your chosen SIEM/XDR and AI runtime stack. Palo Alto is our reference architecture, but we deliver against Microsoft Sentinel, Splunk, CrowdStrike, or your existing stack.',
     },
-    ctaLabel: 'Book Enterprise Assessment',
+    ctaLabel: 'Schedule Consultation',
+    requestMeeting: true,
   },
 
   // ===== TIER 3 =====
@@ -237,7 +239,7 @@ export const aiSecurityServices: AISecurityService[] = [
       description:
         "Full AI security stack deployed and tuned to your firm's confidentiality model. Palo Alto is our preferred reference architecture; Microsoft and Zscaler deployments available when the existing environment favors them.",
     },
-    ctaLabel: 'Request a Meeting',
+    ctaLabel: 'Schedule Consultation',
     requestMeeting: true,
   },
   {
@@ -263,7 +265,7 @@ export const aiSecurityServices: AISecurityService[] = [
       description:
         'Private LLM operates behind full inspection on your preferred XDR platform — on-prem data never leaves your network, and every query is logged to your SIEM of choice.',
     },
-    ctaLabel: 'Request a Meeting',
+    ctaLabel: 'Schedule Consultation',
     requestMeeting: true,
   },
   {
@@ -289,7 +291,7 @@ export const aiSecurityServices: AISecurityService[] = [
       description:
         'Every custom agent runs behind runtime AI security; output and audit trails integrate with the SIEM/SOAR of your choice for detection + response.',
     },
-    ctaLabel: 'Request a Meeting',
+    ctaLabel: 'Schedule Consultation',
     requestMeeting: true,
   },
 
@@ -325,8 +327,7 @@ export const aiSecurityServices: AISecurityService[] = [
     tag: 'Premium Advisory',
     name: 'Fractional AI Advisor / vCISO',
     featured: true,
-    price: '$8,500 – $15,000',
-    priceSuffix: '/mo',
+    price: '$8,500 – $15,000/mo',
     priceNote: '3–12 month engagement',
     meta: ['8–20 hrs/mo', 'Direct advisory'],
     description:
@@ -344,7 +345,8 @@ export const aiSecurityServices: AISecurityService[] = [
       description:
         "Your fractional advisor is vendor-neutral and experienced across major AI security platforms. We advise on the stack you have — and tell you honestly when it's the wrong stack.",
     },
-    ctaLabel: 'Book Advisory Call',
+    ctaLabel: 'Schedule Consultation',
+    requestMeeting: true,
   },
   {
     id: 'enterprise-managed',
@@ -369,7 +371,7 @@ export const aiSecurityServices: AISecurityService[] = [
       description:
         "KayDev operates your AI security stack as a managed service — Palo Alto is our preferred platform, but we'll run yours if Microsoft, Splunk, or CrowdStrike is already in place.",
     },
-    ctaLabel: 'Request a Meeting',
+    ctaLabel: 'Schedule Consultation',
     requestMeeting: true,
   },
 ]
