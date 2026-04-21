@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
               <p><strong className="text-white">Phone:</strong> (682) 628-9545</p>
               <p><strong className="text-white">Location:</strong> Fort Worth, TX</p>
               <div className="pt-3 flex flex-wrap gap-1.5">
-                {['Native-Owned', 'Black-Owned', 'SDVOSB', 'MBE', 'SBE', 'DBE'].map((c) => (
+                {['Native-Owned', 'SDVOSB', 'MBE', 'SBE', 'DBE'].map((c) => (
                   <span
                     key={c}
                     className="inline-block bg-primary-500/10 border border-primary-500/60 text-primary-300 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider"
@@ -191,7 +191,7 @@ export const Footer: React.FC = () => {
             describe technologies that KayDev consultants have experience implementing,
             configuring, or advising on; they do not imply endorsement, certification,
             authorization, or affiliation. Diverse-supplier certifications (Native-Owned,
-            Black-Owned, SDVOSB, MBE, SBE, DBE) are verified through NMSDC, US DOT, SBA VetCert,
+            SDVOSB, MBE, SBE, DBE) are verified through NMSDC, US DOT, SBA VetCert,
             and applicable state/municipal registries.
           </p>
         </div>

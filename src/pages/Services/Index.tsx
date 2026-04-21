@@ -62,7 +62,7 @@ export const ServicesIndex: React.FC = () => {
                     professional-services firms and mid-market companies.
                   </p>
                   <p className="text-xs text-neutral-500">
-                    Certified Native-Owned • Black-Owned • SDVOSB • MBE • SBE • DBE
+                    Certified Native-Owned • SDVOSB • MBE • SBE • DBE
                   </p>
                 </div>
                 <div className="flex-shrink-0">

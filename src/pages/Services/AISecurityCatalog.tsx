@@ -148,7 +148,7 @@ export const AISecurityCatalog: React.FC = () => {
         <title>AI Security &amp; Governance Services | KayDev Technology</title>
         <meta
           name="description"
-          content="Vendor-neutral AI security assessments and flexible remediation built on NIST AI RMF. Services for professional services firms and mid-market companies. Certified Native-Owned, SDVOSB, MBE, SBE, DBE, Black-Owned."
+          content="Vendor-neutral AI security assessments and flexible remediation built on NIST AI RMF. Services for professional services firms and mid-market companies. Certified Native-Owned, SDVOSB, MBE, SBE, DBE."
         />
       </Helmet>
 
@@ -220,8 +220,7 @@ export const AISecurityCatalog: React.FC = () => {
             <p className="body-text text-neutral-200 mb-8">
               Book a free 30-minute discovery call. We'll tell you exactly which
               assessment fits your firm, give you a fixed fee, and have you secured in
-              under 30 days. Certified Native-Owned, Black-Owned, SDVOSB, MBE, SBE, and
-              DBE.
+              under 30 days. Certified Native-Owned, SDVOSB, MBE, SBE, and DBE.
             </p>
             <a
               href={buildMailto('AI Assessment Discovery Call')}
@@ -252,7 +251,7 @@ export const AISecurityCatalog: React.FC = () => {
             technologies that KayDev consultants have experience implementing,
             configuring, or advising on; they do not imply endorsement, certification,
             authorization, or affiliation. Diverse-supplier certifications
-            (Native-Owned, Black-Owned, SDVOSB, MBE, SBE, DBE) are verified through
+            (Native-Owned, SDVOSB, MBE, SBE, DBE) are verified through
             NMSDC, US DOT, SBA VetCert, and applicable state/municipal registries.
           </p>
         </Container>

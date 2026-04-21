@@ -279,13 +279,13 @@ export const About: React.FC = () => {
             </div>
             <h2 className="heading-2 mb-4">Certifications &amp; Designations</h2>
             <p className="body-text text-neutral-300">
-              KayDev Technology is a certified diverse business on six registries. We
+              KayDev Technology is a certified diverse business on five registries. We
               qualify for federal set-asides, state and municipal diversity programs,
               and Tier 1 / Tier 2 corporate supplier diversity requirements.
             </p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {businessCertifications.map((c) => (
               <AnimatedSection key={c.name}>
                 <Card className="h-full text-center p-5">

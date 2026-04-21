@@ -7,7 +7,34 @@ import { AnimatedSection } from '../shared/AnimatedSection'
 import { Icon } from '../shared/Icon'
 import { LuArrowRight } from 'react-icons/lu'
 
+interface OverviewItem {
+  id: string
+  title: string
+  tagline: string
+  icon: string
+  path: string
+}
+
+const aiCatalogEntry: OverviewItem = {
+  id: 'ai-security-catalog',
+  title: 'AI Security & Governance',
+  tagline: 'Vendor-Neutral AI Assessments & NIST AI RMF Governance',
+  icon: 'Brain',
+  path: '/services/ai-security-catalog',
+}
+
 export const ServicesOverview: React.FC = () => {
+  const items: OverviewItem[] = [
+    aiCatalogEntry,
+    ...services.map((s) => ({
+      id: s.id,
+      title: s.title,
+      tagline: s.tagline,
+      icon: s.icon,
+      path: `/services/${s.slug}`,
+    })),
+  ]
+
   return (
     <section className="py-20 bg-dark-400">
       <Container>
@@ -19,33 +46,30 @@ export const ServicesOverview: React.FC = () => {
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {items.map((item, index) => (
             <AnimatedSection
-              key={service.id}
+              key={item.id}
               animation={index % 2 === 0 ? 'fade-up' : 'slide-right'}
             >
-              <Link to={`/services/${service.slug}`}>
+              <Link to={item.path}>
                 <Card className="h-full flex flex-col hover:border-primary-500 hover:shadow-2xl">
-                  {/* Icon */}
                   <div className="mb-4 inline-flex">
                     <div className="bg-primary-500 p-3 rounded-lg">
                       <Icon
-                        name={service.icon}
+                        name={item.icon}
                         size={28}
                         className="text-white"
                       />
                     </div>
                   </div>
 
-                  {/* Content */}
                   <h3 className="text-xl font-display font-semibold text-white mb-2">
-                    {service.title}
+                    {item.title}
                   </h3>
                   <p className="text-neutral-400 text-sm mb-6 flex-grow">
-                    {service.tagline}
+                    {item.tagline}
                   </p>
 
-                  {/* CTA */}
                   <div className="flex items-center text-primary-500 font-semibold group">
                     Learn More
                     <LuArrowRight

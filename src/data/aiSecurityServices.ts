@@ -447,7 +447,6 @@ export interface Certification {
 
 export const businessCertifications: Certification[] = [
   { name: 'Native-Owned', description: 'Federally recognized Native American ownership — Tribal 8(a) and BIA eligible.' },
-  { name: 'Black-Owned', description: 'Certified Black-Owned business — qualifies under federal, state, and corporate minority-supplier programs.' },
   { name: 'SDVOSB', description: 'Service-Disabled Veteran-Owned Small Business — VetCert verified for federal set-asides.' },
   { name: 'MBE', description: 'Minority Business Enterprise — NMSDC certified for Fortune 500 supplier diversity programs.' },
   { name: 'SBE', description: 'Small Business Enterprise — certified for state and municipal SBE set-asides.' },
