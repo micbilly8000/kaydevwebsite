@@ -197,7 +197,7 @@ export const AISecurityCatalog: React.FC = () => {
               <LuTriangleAlert className="inline mr-2 text-warning" size={16} />
               <strong className="text-warning">Independent Consultancy Notice:</strong>{' '}
               KayDev Technology is not an authorized reseller, partner, or affiliate
-              of Palo Alto Networks, Microsoft, Zscaler, Fortinet, CrowdStrike, Splunk,
+              of Palo Alto Networks, Microsoft, Zscaler, CrowdStrike, Splunk,
               Anthropic, OpenAI, or any other vendor referenced on this page. Product
               names are used solely to describe technologies our consultants have
               experience with. All trademarks are property of their respective owners.
@@ -241,12 +241,12 @@ export const AISecurityCatalog: React.FC = () => {
             </strong>{' '}
             KayDev Technology, LLC is an independent consultancy. We are <strong>not</strong>{' '}
             an authorized reseller, partner, affiliate, or representative of Palo Alto
-            Networks, Microsoft, Zscaler, Fortinet, CrowdStrike, Splunk, Netskope,
+            Networks, Microsoft, Zscaler, CrowdStrike, Splunk, Netskope,
             Anthropic, OpenAI, Google, or any other vendor referenced on this page.
             All product names, logos, and trademarks — including but not limited to
             Palo Alto Networks, AIRS, CASB-X, Prisma, XSIAM, Cortex, Microsoft
             Defender, Purview, Sentinel, Entra, Zscaler, CrowdStrike Falcon, Splunk,
-            Fortinet, Netskope, Claude, ChatGPT, and Gemini — are the property of
+            Netskope, Claude, ChatGPT, and Gemini — are the property of
             their respective owners. References to these products describe
             technologies that KayDev consultants have experience implementing,
             configuring, or advising on; they do not imply endorsement, certification,

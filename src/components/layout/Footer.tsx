@@ -185,7 +185,7 @@ export const Footer: React.FC = () => {
             <strong className="text-neutral-400">Independence &amp; Trademark Notice:</strong>{' '}
             KayDev Technology, LLC is an independent consultancy. We are <strong>not</strong> an
             authorized reseller, partner, affiliate, or representative of Palo Alto Networks,
-            Microsoft, Zscaler, Fortinet, CrowdStrike, Splunk, Netskope, Anthropic, OpenAI,
+            Microsoft, Zscaler, CrowdStrike, Splunk, Netskope, Anthropic, OpenAI,
             Google, or any other vendor referenced on this site. All product names, logos, and
             trademarks are the property of their respective owners. References to these products
             describe technologies that KayDev consultants have experience implementing,
