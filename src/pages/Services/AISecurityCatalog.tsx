@@ -38,7 +38,7 @@ const verticalIcons: Record<string, React.ElementType> = {
   'Government Contractors': LuLandmark,
 }
 
-const MAILTO_BASE = 'mailto:info@kaydevtech.com'
+const MAILTO_BASE = 'mailto:ai@kaydevtech.com'
 
 const buildMailto = (subject: string) =>
   `${MAILTO_BASE}?subject=${encodeURIComponent(subject)}`
