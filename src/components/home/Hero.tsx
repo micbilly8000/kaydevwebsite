@@ -35,7 +35,6 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-400 via-dark-300 to-dark-400 z-0">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500 rounded-full blur-3xl opacity-20" />
@@ -43,7 +42,6 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Content */}
       <Container className="relative z-10 py-20">
         <motion.div
           variants={containerVariants}
@@ -51,37 +49,70 @@ export const Hero: React.FC = () => {
           animate="visible"
           className="max-w-4xl"
         >
+          <motion.div
+            variants={itemVariants}
+            className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-primary-500/10 border border-primary-500/40"
+          >
+            <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
+            <span className="text-primary-500 text-xs font-bold uppercase tracking-widest">
+              Native-Owned · SDVOSB · MBE · Vendor-Neutral
+            </span>
+          </motion.div>
+
           <motion.h1
             variants={itemVariants}
             className="heading-1 mb-6 leading-tight"
           >
-            Enterprise Security <span className="text-primary-500">Redefined</span>
+            <span className="text-primary-500">AI Security</span> &amp;{' '}
+            <span className="text-cyber-500">Cleared Staffing</span>
+            <br />
+            for Mission-Critical Operations
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
-            className="body-text mb-8 max-w-2xl text-xl"
+            className="body-text mb-8 max-w-3xl text-xl"
           >
-            Protecting critical infrastructure with cutting-edge cybersecurity, AI/ML security, and blockchain solutions. Trusted by government agencies and Fortune 500 companies.
+            Vendor-neutral AI governance and DoD-cleared cybersecurity talent for
+            federal agencies and Fortune 500 enterprises. NIST AI RMF-aligned
+            assessments, productized remediation, and security-cleared professionals
+            ready to deploy.
           </motion.p>
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 mb-12"
+            className="flex flex-col sm:flex-row gap-4 mb-8"
           >
-            <Link to="/services">
+            <Link to="/services/ai-security-catalog">
               <Button variant="primary" size="lg">
-                Explore Services
+                Explore AI Security
               </Button>
             </Link>
-            <Link to="/contact">
+            <Link to="/services/temporary-staffing">
               <Button variant="secondary" size="lg">
-                Contact Us
+                Request Cleared Talent
               </Button>
             </Link>
           </motion.div>
 
-          {/* Scroll Indicator */}
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-neutral-400"
+          >
+            <span className="flex items-center gap-2">
+              <span className="text-primary-500">✓</span> NIST AI RMF-aligned
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="text-primary-500">✓</span> CMMC Level 2-ready
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="text-primary-500">✓</span> DoD security clearances
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="text-primary-500">✓</span> Trusted by NASA &amp; DoD
+            </span>
+          </motion.div>
+
           <motion.button
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
