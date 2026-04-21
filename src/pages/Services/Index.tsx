@@ -27,7 +27,7 @@ export const ServicesIndex: React.FC = () => {
     <>
       <Helmet>
         <title>Our Services | KayDev Technology</title>
-        <meta name="description" content="Explore KayDev's comprehensive cybersecurity, cloud security, blockchain security, AI automation security, and staffing services." />
+        <meta name="description" content="Explore KayDev's comprehensive AI security & governance, temporary staffing, cloud security, cybersecurity, and blockchain security services." />
       </Helmet>
 
       <PageHeader
@@ -38,10 +38,43 @@ export const ServicesIndex: React.FC = () => {
       <section className="py-20 bg-dark-400">
         <Container>
           {/* Summary */}
-          <AnimatedSection className="max-w-3xl mx-auto mb-16 text-center">
+          <AnimatedSection className="max-w-3xl mx-auto mb-12 text-center">
             <p className="body-text text-xl text-neutral-300 mb-8">
               KayDev Technology delivers enterprise-grade security solutions tailored to protect your critical infrastructure. Whether you need cybersecurity protection, cloud security, blockchain audits, AI governance, or skilled security professionals, our expert team provides comprehensive solutions designed for government agencies and Fortune 500 companies.
             </p>
+          </AnimatedSection>
+
+          {/* AI Security Catalog Feature Card */}
+          <AnimatedSection className="mb-16">
+            <Card className="bg-gradient-to-br from-primary-500/10 via-dark-300 to-dark-400 border-primary-500/40">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                <div className="flex-1">
+                  <div className="text-primary-500 text-xs font-bold uppercase tracking-widest mb-2">
+                    New • Productized AI Security
+                  </div>
+                  <h3 className="heading-3 mb-2">
+                    AI Security &amp; Governance Services Catalog
+                  </h3>
+                  <p className="text-neutral-300 text-sm leading-relaxed mb-3">
+                    Vendor-neutral assessments, NIST AI RMF-aligned governance, and
+                    flexible remediation across 12 productized offerings — from a $497
+                    Shadow AI Discovery to enterprise-managed AI security. Built for
+                    professional-services firms and mid-market companies.
+                  </p>
+                  <p className="text-xs text-neutral-500">
+                    Certified Native-Owned • Black-Owned • SDVOSB • MBE • SBE • DBE
+                  </p>
+                </div>
+                <div className="flex-shrink-0">
+                  <Link
+                    to="/services/ai-security-catalog"
+                    className="inline-block bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg px-6 py-3 transition-colors duration-200 text-sm whitespace-nowrap"
+                  >
+                    Explore Catalog →
+                  </Link>
+                </div>
+              </div>
+            </Card>
           </AnimatedSection>
 
           {/* Services Grid */}
@@ -78,39 +111,6 @@ export const ServicesIndex: React.FC = () => {
               )
             })}
           </div>
-
-          {/* AI Security Catalog Feature Card */}
-          <AnimatedSection className="mt-16">
-            <Card className="bg-gradient-to-br from-primary-500/10 via-dark-300 to-dark-400 border-primary-500/40">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-                <div className="flex-1">
-                  <div className="text-primary-500 text-xs font-bold uppercase tracking-widest mb-2">
-                    New • Productized AI Security
-                  </div>
-                  <h3 className="heading-3 mb-2">
-                    AI Security &amp; Governance Services Catalog
-                  </h3>
-                  <p className="text-neutral-300 text-sm leading-relaxed mb-3">
-                    Vendor-neutral assessments, NIST AI RMF-aligned governance, and
-                    flexible remediation across 12 productized offerings — from a $497
-                    Shadow AI Discovery to enterprise-managed AI security. Built for
-                    professional-services firms and mid-market companies.
-                  </p>
-                  <p className="text-xs text-neutral-500">
-                    Certified Native-Owned • Black-Owned • SDVOSB • MBE • SBE • DBE
-                  </p>
-                </div>
-                <div className="flex-shrink-0">
-                  <Link
-                    to="/services/ai-security-catalog"
-                    className="inline-block bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg px-6 py-3 transition-colors duration-200 text-sm whitespace-nowrap"
-                  >
-                    Explore Catalog →
-                  </Link>
-                </div>
-              </div>
-            </Card>
-          </AnimatedSection>
 
           {/* CTA Section */}
           <AnimatedSection className="mt-16 text-center">
