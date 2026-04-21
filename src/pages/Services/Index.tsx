@@ -57,7 +57,7 @@ export const ServicesIndex: React.FC = () => {
                   </h3>
                   <p className="text-neutral-300 text-sm leading-relaxed mb-3">
                     Vendor-neutral assessments, NIST AI RMF-aligned governance, and
-                    flexible remediation across 12 productized offerings — from a $497
+                    flexible remediation across 12 productized offerings — from a $997
                     Shadow AI Discovery to enterprise-managed AI security. Built for
                     professional-services firms and mid-market companies.
                   </p>
