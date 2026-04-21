@@ -64,19 +64,16 @@ export const Hero: React.FC = () => {
             className="heading-1 mb-6 leading-tight"
           >
             <span className="text-primary-500">AI Security</span> &amp;{' '}
-            <span className="text-cyber-500">Cleared Staffing</span>
-            <br />
-            for Mission-Critical Operations
+            <span className="text-cyber-500">Cybersecurity Staffing</span>
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
             className="body-text mb-8 max-w-3xl text-xl"
           >
-            Vendor-neutral AI governance and DoD-cleared cybersecurity talent for
-            federal agencies and Fortune 500 enterprises. NIST AI RMF-aligned
-            assessments, productized remediation, and security-cleared professionals
-            ready to deploy.
+            Vendor-neutral AI governance and cybersecurity talent for government
+            agencies and Fortune 500 enterprises. NIST AI RMF-aligned assessments,
+            productized remediation, and security professionals ready to deploy.
           </motion.p>
 
           <motion.div
@@ -90,7 +87,7 @@ export const Hero: React.FC = () => {
             </Link>
             <Link to="/services/temporary-staffing">
               <Button variant="secondary" size="lg">
-                Request Cleared Talent
+                Request Talent
               </Button>
             </Link>
           </motion.div>
@@ -106,10 +103,10 @@ export const Hero: React.FC = () => {
               <span className="text-primary-500">✓</span> CMMC Level 2-ready
             </span>
             <span className="flex items-center gap-2">
-              <span className="text-primary-500">✓</span> DoD security clearances
+              <span className="text-primary-500">✓</span> Certified diverse supplier
             </span>
             <span className="flex items-center gap-2">
-              <span className="text-primary-500">✓</span> Trusted by NASA &amp; DoD
+              <span className="text-primary-500">✓</span> Trusted by NASA &amp; Fortune 500
             </span>
           </motion.div>
 

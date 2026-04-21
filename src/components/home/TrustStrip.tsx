@@ -46,11 +46,10 @@ export const TrustStrip: React.FC = () => {
           <div className="text-primary-500 text-xs font-bold uppercase tracking-widest mb-3">
             Why Government &amp; Fortune 500 Trust KayDev
           </div>
-          <h2 className="heading-2 mb-4">Credentialed. Cleared. Independent.</h2>
+          <h2 className="heading-2 mb-4">Credentialed. Independent. Proven.</h2>
           <p className="body-text text-neutral-300">
-            Framework-led methodology, security-cleared practitioners, and
-            vendor-neutral guidance — the combination mission-critical programs
-            require.
+            Framework-led methodology, seasoned practitioners, and vendor-neutral
+            guidance — the combination serious security programs require.
           </p>
         </AnimatedSection>
 

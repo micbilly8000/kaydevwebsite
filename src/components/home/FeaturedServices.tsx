@@ -39,19 +39,19 @@ const flagshipServices: FlagshipService[] = [
     path: '/services/ai-security-catalog',
   },
   {
-    eyebrow: 'Cleared Cybersecurity Staffing',
+    eyebrow: 'Cybersecurity Staffing',
     icon: LuUsers,
     accent: 'cyber',
-    title: 'Staff Your Security Mission',
+    title: 'Staff Your Security Team',
     description:
-      'DoD-cleared cybersecurity, cloud, and network engineers ready to deploy on federal contracts and commercial programs. Rapid onboarding for urgent mission needs.',
+      'Cybersecurity, cloud, and network engineers ready to deploy on government and enterprise programs. Rapid onboarding for urgent staffing needs.',
     bullets: [
-      'TS/SCI, Top Secret, and Secret-cleared talent',
+      'Vetted cybersecurity and engineering talent',
       'CISOs, SOC analysts, and security architects',
       'AWS / Azure / GCP cloud security specialists',
       'Short-term, long-term, and contract-to-hire',
     ],
-    ctaText: 'Request Cleared Talent',
+    ctaText: 'Request Talent',
     path: '/services/temporary-staffing',
   },
 ]
@@ -86,8 +86,8 @@ export const FeaturedServices: React.FC = () => {
           </div>
           <h2 className="heading-2 mb-4">Built for Government &amp; Commercial</h2>
           <p className="body-text text-lg">
-            Whether you are standing up an AI governance program or filling a cleared
-            role on a federal contract, KayDev delivers the expertise agencies and
+            Whether you are standing up an AI governance program or filling a role
+            on your security team, KayDev delivers the expertise agencies and
             enterprises demand.
           </p>
         </AnimatedSection>

@@ -12,10 +12,10 @@ export const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>KayDev Technology — AI Security & Cleared Cybersecurity Staffing</title>
+        <title>KayDev Technology — AI Security & Cybersecurity Staffing</title>
         <meta
           name="description"
-          content="Vendor-neutral AI security and DoD-cleared cybersecurity staffing for government agencies and Fortune 500 enterprises. NIST AI RMF-aligned. Native-Owned, SDVOSB, MBE, SBE, DBE certified."
+          content="Vendor-neutral AI security and cybersecurity staffing for government agencies and Fortune 500 enterprises. NIST AI RMF-aligned. Native-Owned, SDVOSB, MBE, SBE, DBE certified."
         />
       </Helmet>
       <Hero />

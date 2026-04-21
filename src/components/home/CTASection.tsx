@@ -16,10 +16,10 @@ const paths = [
   },
   {
     icon: LuUsers,
-    eyebrow: 'Cleared Staffing',
+    eyebrow: 'Cybersecurity Staffing',
     heading: 'Fill Your Roles in Days.',
-    body: 'Need a cleared CISO, SOC analyst, or cloud security engineer? Tell us the clearance level and timeline — we will mobilize from our vetted bench.',
-    ctaLabel: 'Request Cleared Talent',
+    body: 'Need a CISO, SOC analyst, or cloud security engineer? Tell us the role and timeline — we will mobilize from our vetted bench.',
+    ctaLabel: 'Request Talent',
     href: '/services/temporary-staffing',
     external: false,
   },
@@ -32,8 +32,8 @@ export const CTASection: React.FC = () => {
         <AnimatedSection className="text-center mb-12 max-w-3xl mx-auto">
           <h2 className="heading-2 text-white mb-4">Choose Your Mission</h2>
           <p className="body-text text-lg">
-            Whether you are securing an AI program or filling a cleared role, KayDev
-            meets you where your mission starts.
+            Whether you are securing an AI program or filling a role on your
+            security team, KayDev meets you where your mission starts.
           </p>
         </AnimatedSection>
 
