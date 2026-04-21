@@ -64,7 +64,7 @@ export const Hero: React.FC = () => {
             className="heading-1 mb-6 leading-tight"
           >
             <span className="text-primary-500">AI Security</span> &amp;{' '}
-            <span className="text-cyber-500">Cybersecurity Staffing</span>
+            <span className="text-cyber-500">Staff-Augmentation</span>
           </motion.h1>
 
           <motion.p
@@ -72,8 +72,9 @@ export const Hero: React.FC = () => {
             className="body-text mb-8 max-w-3xl text-xl"
           >
             Vendor-neutral AI governance and cybersecurity talent for government
-            agencies and Fortune 500 enterprises. NIST AI RMF-aligned assessments,
-            productized remediation, and security professionals ready to deploy.
+            agencies, Fortune 500, and small to medium enterprises. NIST AI RMF-aligned
+            assessments, productized remediation, and security professionals ready
+            to deploy.
           </motion.p>
 
           <motion.div
