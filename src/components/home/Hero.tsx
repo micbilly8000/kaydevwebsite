@@ -107,7 +107,7 @@ export const Hero: React.FC = () => {
               <span className="text-primary-500">✓</span> Certified diverse supplier
             </span>
             <span className="flex items-center gap-2">
-              <span className="text-primary-500">✓</span> Trusted by NASA &amp; Fortune 500
+              <span className="text-primary-500">✓</span> Trusted by Bureau of Indian Affairs &amp; Fortune 500
             </span>
           </motion.div>
 
