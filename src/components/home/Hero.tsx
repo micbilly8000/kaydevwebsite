@@ -55,7 +55,7 @@ export const Hero: React.FC = () => {
           >
             <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
             <span className="text-primary-500 text-xs font-bold uppercase tracking-widest">
-              Native-Owned · SDVOSB · MBE · Vendor-Neutral
+              Native-Owned · SDVOSB · MBE · SBE · Vendor-Neutral
             </span>
           </motion.div>
 
