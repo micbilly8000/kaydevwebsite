@@ -8,7 +8,6 @@ export const navigationItems: NavItem[] = [
       { label: 'Cybersecurity', path: '/services/cybersecurity' },
       { label: 'Cloud Security', path: '/services/cloud-security' },
       { label: 'Blockchain Security', path: '/services/blockchain-security' },
-      { label: 'AI Automation Security', path: '/services/ai-automation-security' },
       { label: 'AI Security & Governance', path: '/services/ai-security-catalog' },
       { label: 'Temporary Staffing', path: '/services/temporary-staffing' },
     ],

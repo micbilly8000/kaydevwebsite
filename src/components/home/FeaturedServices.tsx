@@ -9,13 +9,24 @@ import { Icon } from '../shared/Icon'
 import { LuArrowRight, LuTrendingUp } from 'react-icons/lu'
 
 export const FeaturedServices: React.FC = () => {
-  const aiService = services.find(s => s.id === 'ai-automation-security')!
+  const aiCatalogFeature = {
+    icon: 'Brain',
+    title: 'AI Security & Governance',
+    description:
+      'Vendor-neutral assessments, NIST AI RMF-aligned governance, and flexible remediation across 12 productized offerings — from Shadow AI Discovery to enterprise-managed AI security.',
+    features: [
+      'NIST AI RMF-Aligned Governance',
+      'Shadow AI Discovery & Assessments',
+      'Enterprise-Managed AI Security',
+    ],
+    ctaText: 'Explore AI Catalog',
+    path: '/services/ai-security-catalog',
+  }
   const blockchainService = services.find(s => s.id === 'blockchain-security')!
 
   return (
     <section className="py-20 bg-gradient-to-br from-dark-300 via-dark-400 to-dark-300">
       <Container>
-        {/* Section Header */}
         <AnimatedSection className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4">
             <LuTrendingUp className="text-primary-500" size={24} />
@@ -27,51 +38,45 @@ export const FeaturedServices: React.FC = () => {
           </p>
         </AnimatedSection>
 
-        {/* Featured Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* AI Automation Security */}
+          {/* AI Security & Governance */}
           <AnimatedSection animation="slide-right">
-            <Link to={`/services/${aiService.slug}`}>
+            <Link to={aiCatalogFeature.path}>
               <Card className="h-full hover:border-primary-500 hover:shadow-2xl group cursor-pointer">
-                {/* Icon */}
                 <div className="mb-6 inline-flex">
                   <div className="bg-gradient-to-br from-primary-500 to-primary-600 p-4 rounded-lg group-hover:scale-110 transition-transform">
                     <Icon
-                      name={aiService.icon}
+                      name={aiCatalogFeature.icon}
                       size={32}
                       className="text-white"
                     />
                   </div>
                 </div>
 
-                {/* Badge */}
                 <div className="mb-4 inline-block">
                   <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary-500/20 text-primary-500 text-xs font-semibold">
                     🚀 Future-Focused
                   </span>
                 </div>
 
-                {/* Content */}
                 <h3 className="text-2xl font-display font-semibold text-white mb-3">
-                  {aiService.title}
+                  {aiCatalogFeature.title}
                 </h3>
                 <p className="text-neutral-400 mb-6 leading-relaxed">
-                  {aiService.fullDescription}
+                  {aiCatalogFeature.description}
                 </p>
 
-                {/* Key Features */}
                 <div className="space-y-2 mb-6">
-                  {aiService.features.slice(0, 3).map((feature, i) => (
+                  {aiCatalogFeature.features.map((feature, i) => (
                     <div key={i} className="flex gap-2 items-start">
                       <span className="text-primary-500 mt-1">✓</span>
-                      <span className="text-sm text-neutral-300">{feature.title}</span>
+                      <span className="text-sm text-neutral-300">{feature}</span>
                     </div>
                   ))}
                 </div>
 
-                {/* CTA */}
                 <div className="flex items-center text-primary-500 font-semibold group/cta">
-                  Explore AI Security
+                  {aiCatalogFeature.ctaText}
                   <LuArrowRight
                     size={16}
                     className="ml-2 group-hover/cta:translate-x-1 transition-transform"
@@ -85,7 +90,6 @@ export const FeaturedServices: React.FC = () => {
           <AnimatedSection animation="slide-right">
             <Link to={`/services/${blockchainService.slug}`}>
               <Card className="h-full hover:border-cyber-500 hover:shadow-2xl group cursor-pointer">
-                {/* Icon */}
                 <div className="mb-6 inline-flex">
                   <div className="bg-gradient-to-br from-cyber-500 to-cyber-600 p-4 rounded-lg group-hover:scale-110 transition-transform">
                     <Icon
@@ -96,14 +100,12 @@ export const FeaturedServices: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Badge */}
                 <div className="mb-4 inline-block">
                   <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-cyber-500/20 text-cyber-500 text-xs font-semibold">
                     ⛓️ Web3 Security
                   </span>
                 </div>
 
-                {/* Content */}
                 <h3 className="text-2xl font-display font-semibold text-white mb-3">
                   {blockchainService.title}
                 </h3>
@@ -111,7 +113,6 @@ export const FeaturedServices: React.FC = () => {
                   {blockchainService.fullDescription}
                 </p>
 
-                {/* Key Features */}
                 <div className="space-y-2 mb-6">
                   {blockchainService.features.slice(0, 3).map((feature, i) => (
                     <div key={i} className="flex gap-2 items-start">
@@ -121,7 +122,6 @@ export const FeaturedServices: React.FC = () => {
                   ))}
                 </div>
 
-                {/* CTA */}
                 <div className="flex items-center text-cyber-500 font-semibold group/cta">
                   Explore Blockchain Security
                   <LuArrowRight
@@ -134,7 +134,6 @@ export const FeaturedServices: React.FC = () => {
           </AnimatedSection>
         </div>
 
-        {/* Bottom CTA */}
         <AnimatedSection className="text-center mt-12">
           <p className="body-text mb-6">
             Ready to secure your AI infrastructure or Web3 projects?

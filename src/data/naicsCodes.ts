@@ -6,7 +6,7 @@ export const naicsCodes: NAICSCode[] = [
     title: 'Computer Systems Design Services',
     description: 'Custom computer programming, systems design and implementation services. Includes design of computer systems and networks, as well as software development and integration.',
     category: 'primary',
-    relatedServices: ['cybersecurity', 'cloud-security', 'ai-automation-security'],
+    relatedServices: ['cybersecurity', 'cloud-security'],
   },
   {
     code: '541513',
@@ -41,7 +41,7 @@ export const naicsCodes: NAICSCode[] = [
     title: 'Research and Development in Physical, Engineering, and Life Sciences',
     description: 'Conduct of research and experimental activities in physical and engineering sciences, as well as life sciences research. Includes AI/ML research and blockchain technology development.',
     category: 'secondary',
-    relatedServices: ['ai-automation-security', 'blockchain-security'],
+    relatedServices: ['blockchain-security'],
   },
   {
     code: '561311',

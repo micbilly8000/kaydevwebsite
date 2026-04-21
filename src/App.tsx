@@ -7,7 +7,6 @@ import { ServicesIndex } from '@pages/Services/Index'
 import { Cybersecurity } from '@pages/Services/Cybersecurity'
 import { CloudSecurity } from '@pages/Services/CloudSecurity'
 import { BlockchainSecurity } from '@pages/Services/BlockchainSecurity'
-import { AIAutomationSecurity } from '@pages/Services/AIAutomationSecurity'
 import { AISecurityCatalog } from '@pages/Services/AISecurityCatalog'
 import { TemporaryStaffing } from '@pages/Services/TemporaryStaffing'
 import { NAICSCodes } from '@pages/NAICSCodes'
@@ -20,7 +19,7 @@ function App() {
     <BrowserRouter>
       <Helmet>
         <title>KayDev Technology - Enterprise Cybersecurity Solutions</title>
-        <meta name="description" content="Trusted by NASA, DoD, and Fortune 500 companies. Enterprise cybersecurity, cloud security, blockchain security, AI automation security, and staffing services." />
+        <meta name="description" content="Trusted by NASA, DoD, and Fortune 500 companies. Enterprise cybersecurity, cloud security, blockchain security, AI security & governance, and staffing services." />
       </Helmet>
       <div className="flex flex-col min-h-screen bg-dark-400">
         <Header />
@@ -31,7 +30,6 @@ function App() {
             <Route path="/services/cybersecurity" element={<Cybersecurity />} />
             <Route path="/services/cloud-security" element={<CloudSecurity />} />
             <Route path="/services/blockchain-security" element={<BlockchainSecurity />} />
-            <Route path="/services/ai-automation-security" element={<AIAutomationSecurity />} />
             <Route path="/services/ai-security-catalog" element={<AISecurityCatalog />} />
             <Route path="/services/temporary-staffing" element={<TemporaryStaffing />} />
             <Route path="/naics-codes" element={<NAICSCodes />} />

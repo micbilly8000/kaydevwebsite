@@ -164,60 +164,6 @@ export const services: Service[] = [
     },
   },
   {
-    id: 'ai-automation-security',
-    title: 'AI Automation Security',
-    slug: 'ai-automation-security',
-    tagline: 'ML Model Security & AI Governance Solutions',
-    description: 'Secure your AI/ML pipelines and implement robust AI governance.',
-    fullDescription: 'We provide comprehensive AI security services covering ML model protection, adversarial attack prevention, and AI ethics compliance.',
-    icon: 'Brain',
-    heroImage: '/assets/images/ai-security-hero.jpg',
-    features: [
-      {
-        title: 'ML Model Validation',
-        description: 'Secure model development and validation processes',
-        icon: 'CheckCircle',
-      },
-      {
-        title: 'Adversarial Attack Protection',
-        description: 'Defend against adversarial examples and model evasion',
-        icon: 'Shield',
-      },
-      {
-        title: 'Data Privacy & Protection',
-        description: 'Privacy-preserving ML and differential privacy implementation',
-        icon: 'Lock',
-      },
-      {
-        title: 'AI Governance Framework',
-        description: 'Responsible AI guidelines and compliance framework',
-        icon: 'Briefcase',
-      },
-      {
-        title: 'Model Monitoring',
-        description: 'Continuous monitoring for model drift and anomalies',
-        icon: 'Eye',
-      },
-      {
-        title: 'Bias & Fairness Testing',
-        description: 'Detect and mitigate bias in AI/ML models',
-        icon: 'BarChart3',
-      },
-    ],
-    benefits: [
-      'Secure AI/ML pipeline development',
-      'Detect and prevent adversarial attacks',
-      'Implement responsible AI practices',
-      'Comply with emerging AI regulations',
-      'Reduce AI model vulnerabilities',
-    ],
-    naicsCodes: ['541512', '541715'],
-    cta: {
-      title: 'Secure Your AI Infrastructure',
-      description: 'Get an AI security and governance assessment',
-    },
-  },
-  {
     id: 'temporary-staffing',
     title: 'Temporary Staffing',
     slug: 'temporary-staffing',

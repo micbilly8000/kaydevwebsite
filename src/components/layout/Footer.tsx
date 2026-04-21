@@ -75,14 +75,6 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/services/ai-automation-security"
-                  className="hover:text-primary-500 transition-colors"
-                >
-                  AI Automation Security
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/services/ai-security-catalog"
                   className="hover:text-primary-500 transition-colors"
                 >
