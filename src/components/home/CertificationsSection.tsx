@@ -13,6 +13,16 @@ const certLogos = [
     label: 'Native American Owned Business',
   },
   {
+    src: '/certifications/mbe-logo.png',
+    alt: 'MBE — Certified Minority Business Enterprise',
+    label: 'Minority Business Enterprise',
+  },
+  {
+    src: '/certifications/sbe-logo.png',
+    alt: 'SBE — Certified Small Business Enterprise',
+    label: 'Small Business Enterprise',
+  },
+  {
     src: '/certifications/sdvosb-logo.jpeg',
     alt: 'SDVOSB — Service-Disabled Veteran-Owned Small Business',
     label: 'Federal SDVOSB',

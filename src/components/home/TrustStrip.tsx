@@ -35,7 +35,7 @@ const stats = [
   { value: '50+', label: 'Enterprise Clients' },
   { value: '25+', label: 'Years Experience' },
   { value: '24/7', label: 'Monitoring' },
-  { value: '6', label: 'Diverse Certs' },
+  { value: '5', label: 'Diverse Certs' },
 ]
 
 export const TrustStrip: React.FC = () => {
