@@ -253,7 +253,7 @@ export const aiSecurityServices: AISecurityService[] = [
     description:
       'For firms that cannot send client data to any public AI service. On-premise open-weight LLM deployment with full security instrumentation.',
     bullets: [
-      'On-prem Ollama or vLLM with Llama 3.3 70B / Qwen 2.5 / DeepSeek',
+      'On-prem Ollama or vLLM with US-based open-weight models (Llama 3.3 70B / Gemma 2)',
       'Open WebUI front-end with SSO',
       'Hardware recommendation + procurement',
       'AI runtime security instrumentation',
