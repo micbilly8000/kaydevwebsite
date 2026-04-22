@@ -36,27 +36,7 @@ const ServiceCard: React.FC<{ service: AISecurityService }> = ({ service }) => {
         {service.tag}
       </div>
 
-      <h3 className="heading-3 mb-2">{service.name}</h3>
-
-      <div className="mb-1">
-        {service.requestMeeting ? (
-          <span className="text-xl font-bold text-primary-500">
-            {service.price}
-          </span>
-        ) : (
-          <>
-            <span className="text-3xl font-extrabold text-white">
-              {service.price}
-            </span>
-            {service.priceSuffix && (
-              <span className="text-lg text-neutral-400 font-medium ml-1">
-                {service.priceSuffix}
-              </span>
-            )}
-          </>
-        )}
-      </div>
-      <div className="text-xs text-neutral-500 mb-4">{service.priceNote}</div>
+      <h3 className="heading-3 mb-4">{service.name}</h3>
 
       <div className="flex flex-wrap gap-3 mb-4 text-xs text-neutral-400">
         {service.meta.map((m) => (
