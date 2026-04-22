@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { PageHeader } from '@components/shared/PageHeader'
 import { Container } from '@components/shared/Container'
 import { AnimatedSection } from '@components/shared/AnimatedSection'
@@ -16,16 +17,9 @@ import {
   type AISecurityService,
 } from '@data/aiSecurityServices'
 
-const MAILTO_BASE = 'mailto:ai@kaydevtech.com'
-
-const buildMailto = (subject: string) =>
-  `${MAILTO_BASE}?subject=${encodeURIComponent(subject)}`
+const CONTACT_HREF = '/contact?service=ai-security-catalog'
 
 const ServiceCard: React.FC<{ service: AISecurityService }> = ({ service }) => {
-  const href = service.requestMeeting
-    ? buildMailto(`${service.name} — Meeting Request`)
-    : buildMailto(`${service.name} — Inquiry`)
-
   return (
     <Card
       className={`h-full flex flex-col ${
@@ -101,12 +95,12 @@ const ServiceCard: React.FC<{ service: AISecurityService }> = ({ service }) => {
         </div>
       </div>
 
-      <a
-        href={href}
+      <Link
+        to={CONTACT_HREF}
         className="block text-center bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg px-6 py-3 transition-colors duration-200 text-sm"
       >
         {service.ctaLabel}
-      </a>
+      </Link>
     </Card>
   )
 }
@@ -222,12 +216,12 @@ export const AISecurityCatalog: React.FC = () => {
               assessment fits your firm, give you a fixed fee, and have you secured in
               under 30 days. Certified Native-Owned, SDVOSB, MBE, SBE, and DBE.
             </p>
-            <a
-              href={buildMailto('AI Assessment Discovery Call')}
+            <Link
+              to={CONTACT_HREF}
               className="inline-block bg-primary-500 hover:bg-primary-600 text-white font-bold rounded-lg px-10 py-4 text-lg transition-colors duration-200 shadow-xl shadow-primary-500/30"
             >
               Book Discovery Call
-            </a>
+            </Link>
           </AnimatedSection>
         </Container>
       </section>

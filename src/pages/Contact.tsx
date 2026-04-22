@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useForm } from 'react-hook-form'
+import { useSearchParams } from 'react-router-dom'
 import { PageHeader } from '@components/shared/PageHeader'
 import { Container } from '@components/shared/Container'
 import { AnimatedSection } from '@components/shared/AnimatedSection'
@@ -18,13 +19,22 @@ interface ContactFormData {
   message: string
 }
 
+const AI_SECURITY_CATALOG_OPTION = {
+  id: 'ai-security-catalog',
+  title: 'AI Security & Governance',
+}
+
 export const Contact: React.FC = () => {
+  const [searchParams] = useSearchParams()
+  const preselectedService = searchParams.get('service') || ''
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<ContactFormData>()
+  } = useForm<ContactFormData>({
+    defaultValues: { service: preselectedService },
+  })
   const [submitSuccess, setSubmitSuccess] = useState(false)
 
   const onSubmit = async (data: ContactFormData) => {
@@ -196,6 +206,9 @@ export const Contact: React.FC = () => {
                     className="w-full px-4 py-3 rounded-lg bg-dark-300 border border-dark-200 text-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
                   >
                     <option value="">Select a service...</option>
+                    <option value={AI_SECURITY_CATALOG_OPTION.id}>
+                      {AI_SECURITY_CATALOG_OPTION.title}
+                    </option>
                     {services.map((s) => (
                       <option key={s.id} value={s.id}>
                         {s.title}

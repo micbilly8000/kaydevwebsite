@@ -11,8 +11,8 @@ const paths = [
     heading: 'Stop Leaking. Start Deploying.',
     body: 'Book a free 30-minute discovery call. We will scope the right assessment, quote a fixed fee, and have you secured in under 30 days.',
     ctaLabel: 'Book Discovery Call',
-    href: 'mailto:ai@kaydevtech.com?subject=AI%20Assessment%20Discovery%20Call',
-    external: true,
+    href: '/contact?service=ai-security-catalog',
+    external: false,
   },
   {
     icon: LuUsers,
