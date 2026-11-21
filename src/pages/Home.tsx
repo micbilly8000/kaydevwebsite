@@ -167,7 +167,7 @@ export const Home: React.FC = () => (
       <div className="wrap">
         <div className="section-head">
           <p className="kicker">Who we serve</p>
-          <h2>Mid-size organizations with real hiring needs.</h2>
+          <h2>Organizations with real service and hiring needs.</h2>
         </div>
         <div className="tags">
           {['Healthcare', 'Banks and credit unions', 'Insurance', 'Financial services', 'Law firms', 'Accounting', 'SaaS and technology', 'Transportation', 'Manufacturing', 'Warehousing', 'Federal, state and local government'].map((t) => <span key={t}>{t}</span>)}
