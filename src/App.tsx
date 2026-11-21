@@ -1,45 +1,32 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
-import { Header } from '@components/layout/Header'
-import { Footer } from '@components/layout/Footer'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { Header, Footer, ScrollManager } from '@components/site'
 import { Home } from '@pages/Home'
-import { ServicesIndex } from '@pages/Services/Index'
-import { Cybersecurity } from '@pages/Services/Cybersecurity'
-import { CloudSecurity } from '@pages/Services/CloudSecurity'
-import { BlockchainSecurity } from '@pages/Services/BlockchainSecurity'
-import { AISecurityCatalog } from '@pages/Services/AISecurityCatalog'
-import { TemporaryStaffing } from '@pages/Services/TemporaryStaffing'
 import { NAICSCodes } from '@pages/NAICSCodes'
 import { ClientRoster } from '@pages/ClientRoster'
-import { About } from '@pages/About'
-import { Contact } from '@pages/Contact'
+import { Privacy } from '@pages/Privacy'
 
 function App() {
   return (
     <BrowserRouter>
-      <Helmet>
-        <title>KayDev Technology - Enterprise Cybersecurity Solutions</title>
-        <meta name="description" content="Trusted by NASA, DoD, and Fortune 500 companies. Enterprise cybersecurity, cloud security, blockchain security, AI security & governance, and staffing services." />
-      </Helmet>
-      <div className="flex flex-col min-h-screen bg-dark-400">
-        <Header />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/services" element={<ServicesIndex />} />
-            <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-            <Route path="/services/cloud-security" element={<CloudSecurity />} />
-            <Route path="/services/blockchain-security" element={<BlockchainSecurity />} />
-            <Route path="/services/ai-security-catalog" element={<AISecurityCatalog />} />
-            <Route path="/services/temporary-staffing" element={<TemporaryStaffing />} />
-            <Route path="/naics-codes" element={<NAICSCodes />} />
-            <Route path="/clients" element={<ClientRoster />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <ScrollManager />
+      <a className="skip" href="#main">Skip to content</a>
+      <Header />
+      <main id="main">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/naics-codes" element={<NAICSCodes />} />
+          <Route path="/clients" element={<ClientRoster />} />
+          <Route path="/privacy" element={<Privacy />} />
+          {/* Old pages from the previous site point to the matching home section */}
+          <Route path="/services/temporary-staffing" element={<Navigate to="/#staffing" replace />} />
+          <Route path="/services/ai-security-catalog" element={<Navigate to="/#ai-services" replace />} />
+          <Route path="/services/*" element={<Navigate to="/#staffing" replace />} />
+          <Route path="/about" element={<Navigate to="/#about" replace />} />
+          <Route path="/contact" element={<Navigate to="/#contact" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </main>
+      <Footer />
     </BrowserRouter>
   )
 }

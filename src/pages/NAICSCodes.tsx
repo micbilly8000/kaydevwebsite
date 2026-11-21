@@ -1,132 +1,91 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
 import { naicsCodes } from '@data/naicsCodes'
-import { PageHeader } from '@components/shared/PageHeader'
-import { Container } from '@components/shared/Container'
-import { AnimatedSection } from '@components/shared/AnimatedSection'
-import { Card } from '@components/shared/Card'
-import { Badge } from '@components/shared/Badge'
+import { NAICSCode } from '../types'
+import { BOOKING_URL, EMAIL } from '@components/site'
+
+const serviceLabels: Record<string, string> = {
+  cybersecurity: 'Cybersecurity',
+  'cloud-security': 'Cloud security',
+  'blockchain-security': 'Blockchain security',
+  'temporary-staffing': 'Staffing',
+}
+
+const CodeCard: React.FC<{ code: NAICSCode; primary?: boolean }> = ({ code, primary }) => (
+  <article className={`card${primary ? ' primary' : ''}`}>
+    <div className="code">{code.code}</div>
+    <h3>{code.title}</h3>
+    <p>{code.description}</p>
+    <div className="mini-tags">
+      {code.relatedServices.map((s) => <span key={s}>{serviceLabels[s] ?? s}</span>)}
+    </div>
+  </article>
+)
 
 export const NAICSCodes: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('')
+  const [q, setQ] = useState('')
+  const term = q.trim().toLowerCase()
+  const match = (c: NAICSCode) =>
+    !term || c.code.includes(term) || c.title.toLowerCase().includes(term) || c.description.toLowerCase().includes(term)
 
-  const primaryCodes = naicsCodes.filter(c => c.category === 'primary')
-  const secondaryCodes = naicsCodes.filter(c => c.category === 'secondary')
-
-  const filteredPrimary = primaryCodes.filter(
-    c =>
-      c.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      c.title.toLowerCase().includes(searchTerm.toLowerCase())
-  )
-
-  const filteredSecondary = secondaryCodes.filter(
-    c =>
-      c.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      c.title.toLowerCase().includes(searchTerm.toLowerCase())
-  )
+  const primary = naicsCodes.filter((c) => c.category === 'primary' && match(c))
+  const secondary = naicsCodes.filter((c) => c.category === 'secondary' && match(c))
 
   return (
     <>
       <Helmet>
         <title>NAICS Codes | KayDev Technology</title>
-        <meta name="description" content="NAICS codes for cybersecurity, cloud security, AI automation, and staffing services." />
+        <meta name="description" content="NAICS codes for KayDev Technology, LLC: computer systems design, cybersecurity, data hosting, temporary help and employment placement services." />
       </Helmet>
 
-      <PageHeader
-        title="NAICS Codes"
-        description="Classification codes for KayDev Technology services"
-      />
+      <div className="page-hero">
+        <div className="wrap">
+          <p className="kicker">For contracting officers and supplier-diversity teams</p>
+          <h1>NAICS codes</h1>
+          <p className="lede">The classification codes KayDev Technology, LLC works under for technology, cybersecurity and staffing contracts.</p>
+        </div>
+      </div>
 
-      <section className="py-20 bg-dark-400">
-        <Container>
-          {/* Search */}
-          <AnimatedSection className="mb-12">
-            <input
-              type="text"
-              placeholder="Search by code or description..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-6 py-3 rounded-lg bg-dark-300 border border-dark-200 text-white placeholder-neutral-500 focus:outline-none focus:border-primary-500"
-            />
-          </AnimatedSection>
+      <div className="page-section" style={{ paddingBottom: 32 }}>
+        <div className="wrap">
+          <input
+            className="search"
+            type="search"
+            placeholder="Search by code or description"
+            aria-label="Search NAICS codes"
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+          />
+        </div>
+      </div>
 
-          {/* Primary Codes */}
-          <AnimatedSection className="mb-16">
-            <h2 className="heading-2 mb-8">Primary Service Codes</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {filteredPrimary.map((code) => (
-                <AnimatedSection key={code.code}>
-                  <Card className="border-l-4 border-l-primary-500">
-                    <div className="flex items-start justify-between mb-3">
-                      <div>
-                        <div className="text-3xl font-display font-bold text-primary-500">
-                          {code.code}
-                        </div>
-                        <h3 className="text-lg font-semibold text-white">
-                          {code.title}
-                        </h3>
-                      </div>
-                    </div>
-                    <p className="text-neutral-400 text-sm mb-4">
-                      {code.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {code.relatedServices.map((service) => (
-                        <Link
-                          key={service}
-                          to={`/services/${service}`}
-                          className="inline-block"
-                        >
-                          <Badge variant="primary" className="cursor-pointer hover:opacity-80 transition-opacity">
-                            {service.replace('-', ' ')}
-                          </Badge>
-                        </Link>
-                      ))}
-                    </div>
-                  </Card>
-                </AnimatedSection>
-              ))}
-            </div>
-          </AnimatedSection>
+      <div className="page-section">
+        <div className="wrap">
+          <div className="sub-head"><h2>Primary service codes</h2><span>{primary.length} codes</span></div>
+          {primary.length ? (
+            <div className="grid grid-2">{primary.map((c) => <CodeCard key={c.code} code={c} primary />)}</div>
+          ) : <p className="empty">No primary codes match your search.</p>}
+        </div>
+      </div>
 
-          {/* Secondary Codes */}
-          <AnimatedSection>
-            <h2 className="heading-2 mb-8">Related Service Codes</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {filteredSecondary.map((code) => (
-                <AnimatedSection key={code.code}>
-                  <Card>
-                    <div>
-                      <div className="text-3xl font-display font-bold text-cyber-500 mb-2">
-                        {code.code}
-                      </div>
-                      <h3 className="text-lg font-semibold text-white mb-2">
-                        {code.title}
-                      </h3>
-                    </div>
-                    <p className="text-neutral-400 text-sm mb-4">
-                      {code.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {code.relatedServices.map((service) => (
-                        <Link
-                          key={service}
-                          to={`/services/${service}`}
-                          className="inline-block"
-                        >
-                          <Badge variant="secondary" className="cursor-pointer hover:opacity-80 transition-opacity">
-                            {service.replace('-', ' ')}
-                          </Badge>
-                        </Link>
-                      ))}
-                    </div>
-                  </Card>
-                </AnimatedSection>
-              ))}
-            </div>
-          </AnimatedSection>
-        </Container>
+      <div className="page-section">
+        <div className="wrap">
+          <div className="sub-head"><h2>Related service codes</h2><span>{secondary.length} codes</span></div>
+          {secondary.length ? (
+            <div className="grid grid-2">{secondary.map((c) => <CodeCard key={c.code} code={c} />)}</div>
+          ) : <p className="empty">No related codes match your search.</p>}
+        </div>
+      </div>
+
+      <section className="cta soft">
+        <div className="wrap">
+          <h2>Contracting with KayDev?</h2>
+          <p>Email us with your solicitation or requirement, or book a call to talk through scope and fit.</p>
+          <div className="actions">
+            <a className="btn btn-primary" href={`mailto:${EMAIL}?subject=Contracting%20inquiry`}>Email {EMAIL}</a>
+            <a className="btn btn-ghost" href={BOOKING_URL} target="_blank" rel="noopener">Book a call</a>
+          </div>
+        </div>
       </section>
     </>
   )
