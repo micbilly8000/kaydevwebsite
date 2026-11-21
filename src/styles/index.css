@@ -346,3 +346,11 @@ section { padding: 96px 0; }
 .nav-links a, .brand span { white-space: nowrap; }
 .nav-links { gap: 24px; }
 .brand { flex: none; }
+
+/* Sources at the end of articles */
+.sources { margin-top: 48px; padding: 24px 0 0; border-top: 1px solid var(--line); }
+.sources h2 { font-size: 16px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); font-weight: 600; margin: 0 0 14px; }
+.sources ol { margin: 0; padding-left: 20px; display: grid; gap: 10px; font-size: 15px; color: var(--ink-2); }
+.sources a { color: var(--accent); }
+.editorial-note { margin-top: 24px; font-size: 14px; color: var(--ink-3); }
+.side-box p.side-note { margin: 0; font-size: 14px; }

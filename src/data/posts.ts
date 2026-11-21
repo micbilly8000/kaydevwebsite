@@ -8,11 +8,22 @@
  *
  * Body blocks: { p: 'paragraph' }, { h2: 'heading' }, { ul: ['item', 'item'] },
  * { quote: 'pull quote' }.
+ *
+ * Sources: whenever a post relies on an outside standard, report, study or news
+ * story, list it in `sources` with the publisher, publication date and a link to
+ * the original. Pull quotes are KayDev's own words, not quotations from others.
  */
 
 export type PostCategory = 'AI Strategy' | 'AI Security' | 'AI and Staffing' | 'Building With AI'
 
 export type Block = { p: string } | { h2: string } | { ul: string[] } | { quote: string }
+
+export interface Source {
+  title: string
+  publisher: string
+  date?: string // as published, e.g. 'January 2023'
+  url: string
+}
 
 export interface Post {
   slug: string
@@ -26,6 +37,8 @@ export interface Post {
   featured?: boolean
   popular?: boolean
   body: Block[]
+  /** Outside material the post relies on or points readers to. Shown at the end of the post. */
+  sources?: Source[]
 }
 
 export const categories: PostCategory[] = ['AI Strategy', 'AI Security', 'AI and Staffing', 'Building With AI']
@@ -76,7 +89,12 @@ export const posts: Post[] = [
       { quote: 'The goal is not to stop people using AI. It is to move them onto tools you can stand behind.' },
       { h2: 'Close the loop' },
       { p: 'Publish a short list of approved tools, explain why the others are restricted, and give people a simple way to request something new. Shadow AI shrinks fastest when the approved option is easier than the workaround.' },
+      { p: 'Keeping an inventory of the AI systems in use is also one of the governance outcomes in the NIST AI Risk Management Framework (Govern 1.6), so this work supports a broader governance program.' },
       { p: 'Our Shadow AI discovery assessment does this end to end and delivers findings with a remediation roadmap.' },
+    ],
+    sources: [
+      { title: 'AI RMF Core: Govern, Map, Measure and Manage', publisher: 'NIST Trustworthy and Responsible AI Resource Center', url: 'https://airc.nist.gov/airmf-resources/airmf/5-sec-core/' },
+      { title: 'Artificial Intelligence Risk Management Framework (AI RMF 1.0), NIST AI 100-1', publisher: 'National Institute of Standards and Technology (NIST)', date: 'January 2023', url: 'https://doi.org/10.6028/NIST.AI.100-1' },
     ],
   },
   {
@@ -126,7 +144,12 @@ export const posts: Post[] = [
       ] },
       { h2: 'Red flags' },
       { p: 'Vague answers on training and retention, no audit logging, or terms that let the vendor change data practices without notice are reasons to pause. A good vendor will answer all ten clearly.' },
+      { p: 'For a formal reference point, the Govern function of the NIST AI Risk Management Framework includes outcomes for AI risks that come from third-party software, data and other supply chain issues (Govern 6).' },
       { p: 'Our AI privacy and vendor risk assessment reviews vendors against these questions and your own requirements.' },
+    ],
+    sources: [
+      { title: 'AI RMF Core: Govern, Map, Measure and Manage', publisher: 'NIST Trustworthy and Responsible AI Resource Center', url: 'https://airc.nist.gov/airmf-resources/airmf/5-sec-core/' },
+      { title: 'Artificial Intelligence Risk Management Framework (AI RMF 1.0), NIST AI 100-1', publisher: 'National Institute of Standards and Technology (NIST)', date: 'January 2023', url: 'https://doi.org/10.6028/NIST.AI.100-1' },
     ],
   },
   {
@@ -139,7 +162,8 @@ export const posts: Post[] = [
     author: 'KayDev Technology',
     cover: 'wave',
     body: [
-      { p: 'The NIST AI Risk Management Framework is a voluntary framework for managing AI risk. It is organized into four functions. You do not need a large team to use it; you need to apply each function at a size that fits your organization.' },
+      { p: 'The NIST AI Risk Management Framework (AI RMF) is a voluntary framework from the National Institute of Standards and Technology for organizations that design, develop, deploy or use AI systems. NIST published version 1.0 in January 2023 and has said a revised version is in progress. Its core is organized into four functions: Govern, Map, Measure and Manage, with Govern cutting across the other three.' },
+      { p: 'You do not need a large team to use it; you need to apply each function at a size that fits your organization. The summaries below are our plain-English reading of each function, not NIST text.' },
       { h2: 'Govern' },
       { p: 'Set the rules and the owners. Write a short AI use policy, name who approves new tools, and decide how AI risk is reported to leadership.' },
       { h2: 'Map' },
@@ -150,6 +174,11 @@ export const posts: Post[] = [
       { p: 'Act on what you find. Prioritize risks, fix or retire systems that fall short, and keep a record of decisions so you can show your work to clients, auditors or regulators.' },
       { quote: 'Start small: a policy, an inventory and an owner for each system covers most of the framework for most companies.' },
       { p: 'Our AI governance readiness assessment is aligned to the NIST AI RMF and identifies the control gaps to close first.' },
+    ],
+    sources: [
+      { title: 'Artificial Intelligence Risk Management Framework (AI RMF 1.0), NIST AI 100-1', publisher: 'National Institute of Standards and Technology (NIST)', date: 'January 2023', url: 'https://doi.org/10.6028/NIST.AI.100-1' },
+      { title: 'AI RMF Core: Govern, Map, Measure and Manage', publisher: 'NIST Trustworthy and Responsible AI Resource Center', url: 'https://airc.nist.gov/airmf-resources/airmf/5-sec-core/' },
+      { title: 'AI Risk Management Framework (overview and AI RMF Playbook)', publisher: 'National Institute of Standards and Technology (NIST)', url: 'https://www.nist.gov/itl/ai-risk-management-framework' },
     ],
   },
 ]

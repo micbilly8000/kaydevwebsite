@@ -135,6 +135,10 @@ export const AINews: React.FC = () => {
         <aside>
           <SubscribeBox />
           <div className="side-box">
+            <h4>About our sources</h4>
+            <p className="side-note">Posts are written by the KayDev team from our own client work. When a post relies on an outside standard, report or news story, the original source is linked at the end of the post.</p>
+          </div>
+          <div className="side-box">
             <h4>From KayDev</h4>
             <ul className="side-links">
               <li><Link to="/#ai-services">AI security assessments</Link></li>
@@ -176,6 +180,20 @@ export const AINewsPost: React.FC = () => {
                   : <blockquote key={i}>{b.quote}</blockquote>
           )}
         </div>
+        {post.sources && post.sources.length > 0 && (
+          <section className="sources" aria-labelledby="sources-h">
+            <h2 id="sources-h">Sources and further reading</h2>
+            <ol>
+              {post.sources.map((src) => (
+                <li key={src.url}>
+                  {src.publisher}{src.date ? ` (${src.date})` : ''}.{' '}
+                  <a href={src.url} target="_blank" rel="noopener">{src.title}</a>.
+                </li>
+              ))}
+            </ol>
+          </section>
+        )}
+        <p className="editorial-note">Written by the KayDev team from our own practice. Outside material is credited and linked above where we rely on it. This article is general information, not legal or compliance advice.</p>
         <div className="article-cta">
           <div>
             <h3>Talk to KayDev</h3>
