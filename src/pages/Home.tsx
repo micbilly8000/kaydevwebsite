@@ -172,7 +172,7 @@ export const Home: React.FC = () => (
         <div className="tags">
           {['Healthcare', 'Banks and credit unions', 'Insurance', 'Financial services', 'Law firms', 'Accounting', 'SaaS and technology', 'Transportation', 'Manufacturing', 'Warehousing', 'Federal, state and local government'].map((t) => <span key={t}>{t}</span>)}
         </div>
-        <p className="regions">Serving clients in Texas, New York, New Jersey, Virginia, Washington DC and California, and nationwide for remote roles.</p>
+        <p className="regions">Serving clients throughout the United States.</p>
       </div>
     </section>
 
