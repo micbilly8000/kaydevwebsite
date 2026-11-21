@@ -52,6 +52,7 @@ export const Header: React.FC = () => {
           {sectionLinks.map((l) => (
             <li key={l.hash}><Link to={`/#${l.hash}`}>{l.label}</Link></li>
           ))}
+          <li><NavLink to="/ai-news">AI News &amp; Strategy</NavLink></li>
           <li><NavLink to="/naics-codes">NAICS codes</NavLink></li>
           <li><NavLink to="/clients">Clients</NavLink></li>
           <li><Link to="/#about">About</Link></li>
@@ -75,6 +76,7 @@ export const Footer: React.FC = () => (
           <ul>
             <li><Link to="/#staffing">Staffing</Link></li>
             <li><Link to="/#ai-services">AI security</Link></li>
+            <li><Link to="/ai-news">AI News &amp; Strategy</Link></li>
             <li><Link to="/naics-codes">NAICS codes</Link></li>
             <li><Link to="/clients">Clients</Link></li>
           </ul>

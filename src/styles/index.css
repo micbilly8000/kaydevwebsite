@@ -249,7 +249,7 @@ section { padding: 96px 0; }
   .sub-head { flex-direction: column; gap: 4px; }
 }
 /* More nav items than kaydevai.com, so collapse the menu earlier */
-@media (max-width: 1080px) {
+@media (max-width: 1280px) {
   .nav-toggle { display: block; }
   .nav-links {
     display: none; position: absolute; left: 0; right: 0; top: 68px;
@@ -266,3 +266,83 @@ section { padding: 96px 0; }
 .cert-pills { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0 0 28px; padding: 0; max-width: 860px; }
 .cert-pills li { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--accent); background: var(--accent-soft); padding: 6px 12px; border-radius: 999px; }
 .cert-pills li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+/* ---- AI News & Strategy (Substack-style layout) ---- */
+.cover { width: 100%; height: auto; aspect-ratio: 5 / 3; border-radius: 12px; display: block; }
+.news-top { padding: 72px 0 0; }
+.news-top h1 { font-size: clamp(36px, 5.4vw, 60px); }
+.news-top .lede { font-size: clamp(17px, 1.8vw, 20px); color: var(--ink-2); max-width: 62ch; margin-top: 16px; }
+.topic-tabs { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 32px; border-bottom: 1px solid var(--line); }
+.topic-tabs button { font: inherit; font-size: 15px; background: none; border: 0; border-bottom: 2px solid transparent; padding: 12px 14px; margin-bottom: -1px; color: var(--ink-2); cursor: pointer; }
+.topic-tabs button:hover { color: var(--ink); }
+.topic-tabs button.on { color: var(--ink); border-bottom-color: var(--ink); font-weight: 500; }
+.post-meta { font-size: 13px; color: var(--ink-3); display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; }
+.post-cat { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; font-size: 12px; }
+.featured { display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: center; padding: 40px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+.featured h2 { font-size: clamp(28px, 3.4vw, 40px); margin: 12px 0; }
+.featured p:not(.post-meta) { color: var(--ink-2); font-size: 18px; }
+.featured .read-more { display: inline-block; margin-top: 18px; font-weight: 500; color: var(--accent); }
+.featured:hover h2 { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.popular { padding-top: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--line); }
+.popular .sub-head h2 { font-size: 20px; }
+.pop-item { display: grid; grid-template-columns: 1fr 96px; gap: 16px; align-items: start; text-decoration: none; }
+.pop-item h3 { font-size: 17px; line-height: 1.3; margin-bottom: 8px; }
+.pop-item .thumb { width: 96px; border-radius: 8px; }
+.pop-item:hover h3, .post-list a:hover h3, .card-link:hover h3 { text-decoration: underline; text-underline-offset: 3px; }
+.news-body { display: grid; grid-template-columns: 1fr 320px; gap: 56px; padding-top: 40px; padding-bottom: 96px; align-items: start; }
+.news-body .sub-head h2 { font-size: 20px; }
+.post-list { list-style: none; margin: 0; padding: 0; }
+.post-list li { border-top: 1px solid var(--line); }
+.post-list a { display: grid; grid-template-columns: 1fr 180px; gap: 24px; padding: 24px 0; text-decoration: none; align-items: start; }
+.post-list h3 { font-size: 20px; line-height: 1.25; }
+.post-list p:not(.post-meta) { color: var(--ink-2); font-size: 15px; margin: 8px 0 10px; }
+.news-body aside { position: sticky; top: 92px; display: grid; gap: 20px; }
+.side-box { border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; background: var(--bg-soft); }
+.side-box p { color: var(--ink-2); font-size: 15px; margin: 12px 0 18px; }
+.side-box .btn { width: 100%; }
+.side-brand { display: flex; align-items: center; gap: 12px; }
+.side-brand img { width: 36px; height: 36px; }
+.side-brand h3 { font-size: 18px; }
+.side-box h4 { margin: 0 0 12px; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); font-weight: 600; }
+.side-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-size: 15px; }
+.side-links a { text-decoration: none; }
+.side-links a:hover { text-decoration: underline; }
+.article { max-width: 760px; padding-top: 48px; padding-bottom: 48px; }
+.article .back { display: inline-block; font-size: 14px; color: var(--ink-3); text-decoration: none; margin-bottom: 28px; }
+.article .back:hover { color: var(--ink); }
+.article h1 { font-size: clamp(32px, 4.6vw, 48px); margin: 12px 0 14px; }
+.article-sub { font-size: 20px; color: var(--ink-2); }
+.byline { margin-top: 18px; font-size: 14px; color: var(--ink-3); }
+.article-cover { margin: 32px 0 8px; }
+.prose { font-size: 18px; line-height: 1.75; }
+.prose p { margin-top: 20px; }
+.prose h2 { font-size: 26px; margin: 40px 0 0; }
+.prose ul { margin: 18px 0 0; padding-left: 22px; display: grid; gap: 8px; }
+.prose blockquote { margin: 28px 0 0; padding: 4px 0 4px 20px; border-left: 3px solid var(--accent); font-size: 21px; font-weight: 500; color: var(--ink); line-height: 1.5; }
+.article-cta { margin-top: 48px; padding: 28px; border-radius: var(--radius); background: var(--bg-soft); border: 1px solid var(--line); display: grid; gap: 18px; }
+.article-cta h3 { font-size: 20px; }
+.article-cta p { color: var(--ink-2); margin-top: 6px; }
+.article-cta .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.more-posts { padding-top: 24px; padding-bottom: 96px; }
+.more-posts .sub-head a { font-size: 14px; color: var(--ink-3); }
+.card-link { text-decoration: none; display: grid; gap: 10px; }
+.card-link h3 { font-size: 18px; line-height: 1.3; }
+@media (max-width: 960px) {
+  .featured { grid-template-columns: 1fr; gap: 24px; }
+  .news-body { grid-template-columns: 1fr; gap: 40px; }
+  .news-body aside { position: static; }
+}
+@media (max-width: 720px) {
+  .news-top { padding-top: 48px; }
+  .topic-tabs { flex-wrap: nowrap; overflow-x: auto; }
+  .topic-tabs button { white-space: nowrap; }
+  .post-list a { grid-template-columns: 1fr 96px; gap: 16px; }
+  .post-list h3 { font-size: 17px; }
+  .post-list p:not(.post-meta) { display: none; }
+  .prose { font-size: 17px; }
+}
+
+/* Keep nav items and brand on one line */
+.nav-links a, .brand span { white-space: nowrap; }
+.nav-links { gap: 24px; }
+.brand { flex: none; }
