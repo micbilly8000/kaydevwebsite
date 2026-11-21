@@ -261,3 +261,8 @@ section { padding: 96px 0; }
   .nav-links li:last-child { border-bottom: 0; padding-top: 12px; }
   .nav-links a { display: block; padding: 14px 0; font-size: 16px; }
 }
+
+/* Hero certification pills */
+.cert-pills { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0 0 28px; padding: 0; max-width: 860px; }
+.cert-pills li { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--accent); background: var(--accent-soft); padding: 6px 12px; border-radius: 999px; }
+.cert-pills li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }

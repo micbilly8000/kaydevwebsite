@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { BOOKING_URL, EMAIL } from '@components/site'
+import { BOOKING_URL, EMAIL, CERTIFICATIONS } from '@components/site'
 
 const svg = {
   fill: 'none',
@@ -14,11 +14,11 @@ const svg = {
 
 const certs = [
   { src: '/certifications/naob-logo.png', alt: 'Native American Owned Business certification', label: 'Native American Owned Business' },
-  { src: '/certifications/sdvosb-logo.jpeg', alt: 'Federal Service-Disabled Veteran-Owned Small Business certification', label: 'Federal SDVOSB' },
-  { src: '/certifications/mbe-logo.png', alt: 'Minority Business Enterprise certification', label: 'Minority Business Enterprise' },
-  { src: '/certifications/sbe-logo.png', alt: 'Small Business Enterprise certification', label: 'Small Business Enterprise' },
-  { src: '/certifications/ny-sdvob-logo.jpg', alt: 'New York State Service-Disabled Veteran-Owned Business certification', label: 'New York State SDVOB' },
+  { src: '/certifications/sdvosb-logo.jpeg', alt: 'Federal Service-Disabled Veteran-Owned Small Business certification', label: 'Service-Disabled Veteran-Owned (Federal SDVOSB)' },
   { src: '/certifications/vethub-logo.webp', alt: 'Texas VetHUB certification', label: 'Texas VetHUB' },
+  { src: '/certifications/ny-sdvob-logo.jpg', alt: 'New York State Service-Disabled Veteran-Owned Business certification', label: 'New York Service-Disabled Veteran-Owned' },
+  { src: '/certifications/sbe-logo.png', alt: 'Small Business Enterprise certification', label: 'Small Business Enterprise' },
+  { src: '/certifications/mbe-logo.png', alt: 'Minority Business Enterprise certification', label: 'Minority Business Enterprise' },
 ]
 
 export const Home: React.FC = () => (
@@ -30,7 +30,9 @@ export const Home: React.FC = () => (
 
     <section className="hero">
       <div className="wrap">
-        <span className="eyebrow"><i></i>Native American and Service-Disabled Veteran-Owned</span>
+        <ul className="cert-pills" aria-label="Certifications">
+          {CERTIFICATIONS.map((c) => <li key={c}>{c}</li>)}
+        </ul>
         <h1>AI, IT and cyber talent, <em>vetted by practitioners.</em></h1>
         <p className="lede">KayDev Technology places AI, IT, cybersecurity and medical professionals with mid-size companies and public-sector programs. Security practitioners screen every technical candidate before you meet them.</p>
         <div className="actions">
@@ -187,11 +189,11 @@ export const Home: React.FC = () => (
           <h3>Certifications</h3>
           <ul>
             <li>Native American Owned Business (NAOB)</li>
-            <li>Minority Business Enterprise (MBE)</li>
-            <li>Small Business Enterprise (SBE)</li>
             <li>Federal Service-Disabled Veteran-Owned Small Business (SDVOSB)</li>
-            <li>New York State Service-Disabled Veteran-Owned Business (SDVOB)</li>
             <li>Texas VetHUB</li>
+            <li>New York State Service-Disabled Veteran-Owned Business (SDVOB)</li>
+            <li>Small Business Enterprise (SBE)</li>
+            <li>Minority Business Enterprise (MBE)</li>
           </ul>
         </div>
       </div>

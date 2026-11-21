@@ -4,15 +4,20 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 export const BOOKING_URL = 'https://calendar.app.google/hGwkEzJ6K166tZjY6'
 export const EMAIL = 'info@kaydevtech.com'
 export const PHONE = '(682) 628-9545'
+export const CERTIFICATIONS = [
+  'Native American Owned Business',
+  'Service-Disabled Veteran-Owned',
+  'Texas VetHUB',
+  'New York Service-Disabled Veteran-Owned',
+  'Small Business Enterprise',
+  'Minority Business Enterprise',
+]
 export const PHONE_HREF = 'tel:+16826289545'
 
-const Brand: React.FC<{ subtitle?: boolean }> = ({ subtitle = true }) => (
+const Brand: React.FC = () => (
   <Link className="brand" to="/" aria-label="KayDev Technology home">
     <img src="/brand/kaydev-mark.png" alt="" width={30} height={30} />
-    <span>
-      KayDev Technology
-      {subtitle && <small>Fort Worth, Texas</small>}
-    </span>
+    <span>KayDev Technology</span>
   </Link>
 )
 
@@ -62,7 +67,7 @@ export const Footer: React.FC = () => (
     <div className="wrap">
       <div className="foot">
         <div>
-          <div style={{ marginBottom: 12 }}><Brand subtitle={false} /></div>
+          <div style={{ marginBottom: 12 }}><Brand /></div>
           <p>KayDev Technology, LLC<br />1751 River Run, Suite 200<br />Fort Worth, TX 76107</p>
         </div>
         <div>
@@ -87,7 +92,7 @@ export const Footer: React.FC = () => (
       </div>
       <div className="legal">
         <span>© {new Date().getFullYear()} KayDev Technology, LLC. All rights reserved.</span>
-        <span>NAOB · MBE · SBE · Federal SDVOSB · NYS SDVOB · Texas VetHUB</span>
+        <span>NAOB · SDVOSB · Texas VetHUB · NYS SDVOB · SBE · MBE</span>
       </div>
     </div>
   </footer>
