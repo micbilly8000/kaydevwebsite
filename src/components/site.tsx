@@ -6,7 +6,7 @@ export const EMAIL = 'info@kaydevtech.com'
 export const PHONE = '(682) 628-9545'
 export const CERTIFICATIONS = [
   'Native American Owned Business',
-  'Service-Disabled Veteran-Owned',
+  'SBA Service-Disabled Veteran-Owned',
   'Texas VetHUB',
   'New York Service-Disabled Veteran-Owned',
   'Small Business Enterprise',
